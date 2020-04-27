@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Invader vs. Evador</title>
+  <link rel="stylesheet" href="style.css">
+<link rel='icon' href='favi.png' >
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Playfair+Display:600&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Playfair+Display:600&display=swap');
+</style>
+<script src="modernizr.custom.js"></script>
+</head>
+<body>
+
+<div id="mydiv">
+  <div id="mydivheader"><img class="cate2" src="door.png" alt="door"></div>
+</div>
+
+<div id="mydiv2">
+  <div id="mydivheader2"><img class="cate2" src="flower.png" alt="flower"></div>
+</div>
+
+<div id="mydiv3">
+  <div id="mydivheader3"><img class="cate" src="flower2.png" alt="flower"></div>
+</div>
+
+<div id="mydiv4">
+  <div id="mydivheader4"><img class="cate" src="flower3.png" alt="flower"></div>
+</div>
+
+  <ul class="grid cs-style-2">
+  	<li>
+  		<figure>
+  			<img src="image.jpg" alt="img01">
+  			<figcaption>
+  				<h3>Camera</h3>
+  				<a href="index3.html">Let’s face it, sometimes I want the security of hallways.
+            <br>
+            <br>
+I want the limitations.</a>
+  			</figcaption>
+  		</figure>
+  	</li>
+    <li>
+  		<figure>
+  			<img src="image2.png" alt="img01">
+  			<figcaption>
+  				<h3>Camera</h3>
+  				<a href="index3.html">I don’t know that I could explain it.
+It’s just a way that things happen sometimes, a certain obliviousness, an immediate clarity.
+<br>
+Like a doorway.
+<br>
+Or a window.
+</a>
+  			</figcaption>
+  		</figure>
+  	</li>
+    <li>
+  		<figure>
+  			<img src="giphy.gif" alt="img01">
+  			<figcaption>
+  				<h3>Camera</h3>
+  				<a href="index3.html">
+There was density in brightness.
+<br>
+There was affection in flowers.
+<br>
+Apprehend then comprehend.
+<br>
+Apprehend then comprehend.</a>
+  			</figcaption>
+  		</figure>
+  	</li>
+  </ul>
+
+<script>
+  dragElement(document.getElementById("mydiv"));
+
+  function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+      // if present, the header is where you move the DIV from:
+      document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+      // otherwise, move the DIV from anywhere inside the DIV:
+      elmnt.onmousedown = dragMouseDown;
+    }
+
+    function dragMouseDown(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // get the mouse cursor position at startup:
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      // call a function whenever the cursor moves:
+      document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // calculate the new cursor position:
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      // set the element's new position:
+      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+      // stop moving when mouse button is released:
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+  }
+  </script>
+
+  <script>
+    dragElement(document.getElementById("mydiv2"));
+
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        // if present, the header is where you move the DIV from:
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        // otherwise, move the DIV from anywhere inside the DIV:
+        elmnt.onmousedown = dragMouseDown;
+      }
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+
+      function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+    </script>
+
+    <script>
+      dragElement(document.getElementById("mydiv3"));
+
+      function dragElement(elmnt) {
+        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+          // if present, the header is where you move the DIV from:
+          document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+        } else {
+          // otherwise, move the DIV from anywhere inside the DIV:
+          elmnt.onmousedown = dragMouseDown;
+        }
+
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // get the mouse cursor position at startup:
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          // call a function whenever the cursor moves:
+          document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // calculate the new cursor position:
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          // set the element's new position:
+          elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+          elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        }
+
+        function closeDragElement() {
+          // stop moving when mouse button is released:
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
+      }
+      </script>
+
+      <script>
+        dragElement(document.getElementById("mydiv4"));
+
+        function dragElement(elmnt) {
+          var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+          if (document.getElementById(elmnt.id + "header")) {
+            // if present, the header is where you move the DIV from:
+            document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+          } else {
+            // otherwise, move the DIV from anywhere inside the DIV:
+            elmnt.onmousedown = dragMouseDown;
+          }
+
+          function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // get the mouse cursor position at startup:
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            // call a function whenever the cursor moves:
+            document.onmousemove = elementDrag;
+          }
+
+          function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            // set the element's new position:
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+          }
+
+          function closeDragElement() {
+            // stop moving when mouse button is released:
+            document.onmouseup = null;
+            document.onmousemove = null;
+          }
+        }
+        </script>
+</body>
+
+
+<script src="toucheffects.js"></script>
+</html>
